@@ -17,8 +17,8 @@ const Card = ({ item, onEdit, onDelete }) => {
                     Done
                 </button> */}
                 <button className="card-button" onClick={onDelete}>
-                    <input type="checkbox"  />
                     Done
+                    <input type="checkbox"  />
                 </button>
                 
             </div>
