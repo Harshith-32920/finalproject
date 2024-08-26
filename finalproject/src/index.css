@@ -121,7 +121,7 @@ button:focus-visible {
   top: 0;
   width: 500vw;
   background-color: #322669;
-  padding: 5%;
+  padding: 1rem;
   text-align: center;
 }
 

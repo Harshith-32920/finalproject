@@ -46,6 +46,8 @@ class Item(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True)
     description = Column(String)
+    # Duedate=Column(String)
+    
 
 Base.metadata.create_all(bind=engine)
 
@@ -53,6 +55,7 @@ Base.metadata.create_all(bind=engine)
 class ItemCreate(BaseModel):
     title: str
     description: str
+    # Duedate:str
 
 class ItemResponse(ItemCreate):
     id: int
@@ -99,6 +102,7 @@ def update_item(item_id: int, item: ItemCreate):
         raise HTTPException(status_code=404, detail="Item not found")
     db_item.title = item.title
     db_item.description = item.description
+    # db_item.Duedate=item.Duedate
     db.commit()
     db.refresh(db_item)
     db.close()
